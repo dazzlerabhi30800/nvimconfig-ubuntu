@@ -14,7 +14,7 @@ local comment = {
 
 local files = {
 	definitionHover = function()
-		vim.fn.VSCodeNotify("editor.showDefinitionPreviewHover")
+		vim.fn.VSCodeNotify("editor.action.showDefinitionPreviewHover")
 	end,
 
 	quickOpen = function()
@@ -56,8 +56,6 @@ local changeWidthHeight = {
 	end,
 }
 
-vim.opt.guicursor = "a:block-Cursor/lCursor"
-
 vim.keymap.set({ "n" }, "<leader>b", menuBar.sideBar)
 vim.keymap.set({ "n" }, "gcc", comment.commentLine)
 vim.keymap.set({ "n" }, "K", files.definitionHover)
@@ -78,3 +76,6 @@ vim.keymap.set({ "n" }, "<C-right>", changeWidthHeight.increaseWidth)
 -- vim.keymap.set("n", "j", "gj")
 
 vim.opt.clipboard:append("unnamedplus")
+
+-- vim.opt.guicursor = "a:block-Cursor/lCursor"
+vim.opt.guicursor = "n-v-c:block-Cursor/lCursor,i-cr:hor10,r-cr:hor10,o:hor10"
