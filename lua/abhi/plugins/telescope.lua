@@ -2,11 +2,11 @@ return {
 	"nvim-telescope/telescope.nvim",
 	branch = "0.1.x",
 	dependencies = {
+		"sharkdp/fd",
 		"nvim-lua/plenary.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		"nvim-tree/nvim-web-devicons",
 		"nvim-telescope/telescope-file-browser.nvim",
-		"sharkdp/fd",
 	},
 	config = function()
 		local builtin = require("telescope.builtin")

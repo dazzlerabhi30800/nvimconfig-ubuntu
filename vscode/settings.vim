@@ -1,4 +1,5 @@
-set guicursor+=n-v-c:blinkon0
+" set guicursor+=n-v-c:blinkon0
+set guicursor=n-c-v:block-nCursor
 let mapleader = " "
 
 
@@ -20,6 +21,8 @@ nnoremap <silent> <C-down> :call VSCodeNotify('workbench.action.decreaseViewHeig
 nnoremap <silent> <Leader>n :call VSCodeNotify('welcome.showNewFileEntries')<CR>
 nnoremap <silent> <Leader>f :call VSCodeNotify('workbench.action.quickOpen')<CR>
 nnoremap <silent> K :call VSCodeNotify('editor.action.showDefinitionPreviewHover')<CR>
+nnoremap <silent> gcc :call VSCodeNotify('editor.action.commentLine')<CR>
+nnoremap <silent> <Leader>b :call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>
 
 
 set clipboard+=unnamedplus
