@@ -77,5 +77,14 @@ vim.keymap.set({ "n" }, "<C-right>", changeWidthHeight.increaseWidth)
 
 vim.opt.clipboard:append("unnamedplus")
 
+vim.opt_local.formatoptions:remove({ "r", "o" })
+vim.cmd([[autocmd FileType * set formatoptions-=ro]])
+
+vim.keymap.set("n", "<C-j>", ":m .+1<CR>==")
+vim.keymap.set("n", "<C-k>", ":m .-2<CR>==")
+vim.keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv")
+
+
 -- vim.opt.guicursor = "a:block-Cursor/lCursor"
 vim.opt.guicursor = "n-v-c:block-Cursor/lCursor,i-cr:hor10,r-cr:hor10,o:hor10"
