@@ -24,8 +24,9 @@ keymap.set("n", "<A-n>", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<A-p>", ":tabp<CR>") --  go to previous tab
 
 -- for the moving line up and down
-vim.keymap.set("n", "<A-j>", ":m +1<CR>==", { noremap = true })
-vim.keymap.set("n", "<A-k>", ":m -2<CR>==", { noremap = true })
+vim.api.nvim_set_keymap("n", "<A-j>", ":m .+1<CR>==", { noremap = true })
+vim.api.nvim_set_keymap("n", "<A-k>", ":m .-2<CR>==", { noremap = true })
+
 vim.api.nvim_set_keymap("i", "<A-j>", "<Esc>:m '>+1<CR>==gi", { noremap = true })
 vim.api.nvim_set_keymap("i", "<A-k>", "<Esc>:m '<-2<CR>==gi", { noremap = true })
 vim.api.nvim_set_keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", { noremap = true })
